@@ -1,0 +1,244 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+/*样式重置*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/*去除ios内阴影*/
+input,textarea{
+    -webkit-appearance: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+/*滑动评分*/
+.grade-h1 {
+    text-align: center;
+    font-size: 20px;
+    color: #3B3B3B;
+    font-weight: normal;
+}
+
+.grade-h4 {
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 0;
+    font-weight: normal;
+    color: #5A5B5B;
+}
+
+.grade-description {
+    font-size: 14px;
+    color: #E8A84B;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: normal;
+
+}
+
+.grade-wrap {
+    margin: 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.grade-content {
+    width: 100%;
+    height: 28px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    background-color: #CECECE;
+    overflow: hidden;
+    padding: 4px 4px 4px 80px;
+}
+
+.grade-content > li {
+    text-indent: -1000px;
+    overflow: hidden;
+    float: left;
+    width: 10%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: white;
+    box-sizing: border-box;
+    border-right: 1px solid #eae7e7;
+    text-align: center;
+}
+
+.grade-content > li:last-child {
+    border-right: none;
+}
+
+.grade-controller {
+    display: block;
+    height: 100%;
+    line-height: 28px;
+    float: right;
+}
+
+.grade-controller > .iconfont {
+    font-size: 12px;
+}
+
+.grade-controller-wrap {
+    position: absolute;
+    left: 0;
+    top: 28px;
+    /*初始宽度80px*/
+    width: 80px;
+    box-sizing: border-box;
+    padding: 0 8px;
+    height: 28px;
+    border-radius: 18px;
+    line-height: 28px;
+    color: white;
+    font-size: 12px;
+    background: -webkit-linear-gradient(left, #6CCB7E, #58BDF0); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #6CCB7E, #58BDF0); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #6CCB7E, #58BDF0); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #6CCB7E, #58BDF0); /* 标准的语法 */
+}
+
+.icon-tips {
+    position: absolute;
+    top: 34px;
+    right: 0;
+    background-color: #f36d00;
+    border-radius: 20px;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 26px;
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    display: none;
+}
+
+.icon-tips.positive {
+    -moz-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.grade-text {
+    margin-top: 40px;
+    display: none;
+    color: #8D8D8D;
+    font-size: 14px;
+}
+.grade-text.text-right{
+    text-align: right;
+}
+.grade-tags {
+    border-radius: 30px;
+    background-color: white;
+    border: 1px solid #C5C6C6;
+    height: 26px;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #36B2E5;
+    line-height: 26px;
+    margin: 3px 6px;
+}
+
+.grade-text-wrap {
+    margin: 20px;
+}
+
+.grade-text-span {
+    border: 1px solid #ccc;
+    min-height: 60px;
+    border-radius: 6px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #aaa;
+    font-size: 12px;
+    display: block;
+    line-height: 14px;
+}
+
+
+.grade-number{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 4px 4px 4px 80px;
+}
+.grade-number>li{
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    float: left;
+    width: 10%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-right: 1px solid white;
+    color: #666;
+    text-align: center;
+}
+.title-code{
+    width: 50vw;
+    margin: 20px 20px 0;
+}
+
